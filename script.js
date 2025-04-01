@@ -50,7 +50,7 @@ function enviarWhatsApp() {
         return;
     }
 
-    let mensaje = `Hola, mi nombre es ${nombre} y quiero más información.`;
+    let mensaje = `Hola, mi nombre es ${nombre} y quiero más información sobre la compra de los tomos de Exsurgens Revenant.`;
     let url = `https://wa.me/51914056817?text=${encodeURIComponent(mensaje)}`; // Aquí pones tu número
 
     cerrarModalWhatsApp();  // Cierra el modal antes de abrir el chat
