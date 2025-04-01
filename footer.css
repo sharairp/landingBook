@@ -3,7 +3,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white; /* Cambia el color del texto si es necesario */
+    color: white; 
     padding: 20px;
     text-align: center; /* Centra el texto del footer */
     padding: 50px 20px; /* Espaciado interno para que el texto no quede pegado */
