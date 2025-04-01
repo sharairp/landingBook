@@ -1,0 +1,89 @@
+@import url("portadas.css");
+@import url("pago.css");
+@import url("sinopsis.css");
+@import url("footer.css");
+@import url("cartas.css");
+
+@font-face {
+    font-family: "Coalition";
+    src: url("./fonts/coalition/Coalition_v2..ttf") format("truetype");
+    /*font-family: "Extrablur";
+    src: url(./fonts/extrablur/ExtraBlur.ttf )format("truetype");*/
+}
+.titulo {
+    font-family: "Coalition";
+    font-weight: normal;
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-family: "Coalition";
+    font-weight: normal;
+    margin-bottom: 45px;
+}
+body{
+    font-family:monospace;
+}
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor_nav {
+    background: none; /* Blanco con opacidad baja */
+    border-color: white;
+    padding: px 0;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    z-index: 2;
+    border-radius: 40px;
+    width: 90%;  /* Ajusta el porcentaje o usa un valor fijo */
+    margin: 0 auto;  
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4b4b; /* Rojo oscuro al pasar el mouse */
+}
+
+.login{
+    position: relative;
+}
+.boton-login {
+    position: absolute;
+    background: none;
+    color: white !important;
+    border: 0.5px solid white; /* Para que se vea mejor */
+    padding: 5px 10px;
+    right: 0;
+    top: 30%;
+    
+}

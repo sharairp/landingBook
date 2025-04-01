@@ -1,0 +1,85 @@
+.portadas {
+    background-image: url('./imagenes/fondo_portadas.jpg'); /* Cambia esto por la URL de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    height: 500px; /* Ajusta la altura a lo que necesites */
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Para que los bordes redondeados recorten la imagen */
+    border-radius: 20px;
+    margin: 20px;
+}
+.portadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.botones-tomos {
+    display: flex;
+    gap: 150px;
+    margin-bottom: 70px;
+    margin-top: -10px;
+}
+
+.tomo-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+}
+
+.tomo-btn img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tomo-btn img:hover {
+    transform: scale(1.1);
+}
+
+.tomo-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tomo-img {
+    position: absolute;
+    width: 200px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+.tomo-img.active {
+    width: 300px;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+    z-index: 2;
+}
+
+.tomo-img:nth-child(1) { transform: translateX(-120px) scale(0.8); }
+.tomo-img:nth-child(3) { transform: translateX(120px) scale(0.8); }
+
+#tomo-activo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+  

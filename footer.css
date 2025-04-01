@@ -1,0 +1,80 @@
+footer {
+    background-image: url("./imagenes/background2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Cambia el color del texto si es necesario */
+    padding: 20px;
+    text-align: center; /* Centra el texto del footer */
+    padding: 50px 20px; /* Espaciado interno para que el texto no quede pegado */
+    height: 300px;
+    margin-top: 0px;
+    position: relative;
+
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: rbg();
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    color:  #ff4b4b !important;
+}
+
+.footer-info a:hover {
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 87, 87, 0.3);
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.footer-social a {
+    color: white !important;
+}
+
+
+.footer-social a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+}
+
+.footer-up button {
+    background: #ff4b4b;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.footer-up button:hover {
+    transform: scale(1.1);
+    background-color: #ff4b4b;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 87, 87, 0.3);
+}

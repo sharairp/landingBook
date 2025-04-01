@@ -1,0 +1,46 @@
+.contenedor-cartas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.carta {
+    width: 250px;
+    background: rgb(255, 255, 255, 0.235);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.carta img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carta:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0);
+}
+
+/* Animación al cargar */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carta {
+    animation: aparecer 0.5s ease-in-out;
+}

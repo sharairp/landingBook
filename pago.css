@@ -1,0 +1,158 @@
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: rgb(15, 15, 15);
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilos del botón */
+
+.botones-container {
+    position: relative;
+    bottom: 0px; /* Distancia desde el borde inferior */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center
+    height: 100vh;
+}
+
+
+.btn-pago, .btn-whatsapp {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-whatsapp, .btn-pago, .btn-scroll {
+    background-color: rgba(255, 255, 255, 0.123); 
+    color: rgb(255, 255, 255);
+}
+
+.btn-scroll{
+    border: none;
+}
+
+.btn-whatsapp img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.botones-container a,
+.botones-container button {
+    border-radius: 20px; /* Ajusta el valor según qué tan redondeado lo quieres */
+    padding: 10px 20px;  /* Ajusta el relleno para que se vean bien */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+.btn-whatsapp:hover {
+
+    transform: scale(1.1);
+    background-color: #ff4b4b;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 87, 87, 0.3);
+
+}
+.btn-pago:hover{
+    transform: scale(1.1);
+    background-color: #ff4b4b;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 87, 87, 0.3);
+}
+.btn-scroll:hover{
+    transform: scale(1.1);
+    background-color: #ff4b4b;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 87, 87, 0.3);
+}
+
+/*ooooo*/
+/* Alinear el formulario */
+.modal-contenido form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px; /* Espacio entre elementos */
+}
+
+/* Estilizar los labels */
+.modal-contenido label {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    color: white;
+}
+
+/* Ajustar los inputs */
+.modal-contenido input,
+.modal-contenido select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    color: white;
+}
+
+/* Botones dentro del modal */
+.modal-contenido button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-contenido button:hover {
+    background-color: #ff2d2d;
+}
+
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.precios-info{
+    text-align: center;
+}

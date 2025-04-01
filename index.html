@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exsurgens Revenant</title>
+    <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo"  class="titulo">EXSURGENS REVENANT</h1>
+        <nav class="contenedor_nav">
+            <ul>
+                <li><a href="#titulo">Home</a></li>
+                <li><a href="#sinopsis">Sinopsis</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+            </ul>
+            <div class="Login">
+                <button class="boton-login">Login</button>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <section class="portadas">
+        <div class="botones-tomos">
+            <button class="tomo-btn active" data-tomo="1">
+                <img src="./imagenes/imgcoverbook.png" alt="Tomo 1">
+            </button>
+            <button class="tomo-btn" data-tomo="2">
+                <img src="./imagenes/imgcoverbook2.png" alt="Tomo 2">
+            </button>
+            <button class="tomo-btn" data-tomo="3">
+                <img src="./imagenes/imgcoverbook3.png" alt="Tomo 3">
+            </button>
+        </div>
+    
+        <div class="tomo-container">
+            <img class="tomo-img active" src="./imagenes/coverbook.png" alt="Tomo 1">
+            <img class="tomo-img" src="./imagenes/coverbook2.png" alt="Tomo 2">
+            <img class="tomo-img" src="./imagenes/coverbook3.png" alt="Tomo 3">
+        </div>
+
+    
+        <div class="botones-container">
+           <!-- <a href="https://wa.me/51914056817"   target="_blank" class="btn-whatsapp" onclick="abrirModalWhatsApp()" >
+                <img src="./imagenes/wsp.svg" alt="WhatsApp">
+            </a>-->
+            <button class="btn-whatsapp" onclick="abrirModalWhatsApp()">
+                <img src="./imagenes/wsp.svg" alt="WhatsApp">
+            </button>
+            <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
+            <button class="btn-scroll">Seguir bajando</button>
+        </div>
+        
+    </section>
+
+    <section id="sinopsis" class="sinopsis">
+        <h2>Sinopsis</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, iure <br> ipsa nihil impedit officiis, eligendi pariatur quas iusto rerum dolore <br> quibusdam numquam adipisci blanditiis dignissimos quod corrupti tenetur <br>cupiditate. Repellendus?
+        Lorem ipsum dolor sit amet consectetur adipis <br> elit. Beatae illum veritatis velit eum consequuntur doloremque facilis <br> eveniet nulla asperiores magni molestiae, consequatur atque, cum debitis <br> ullam doloribus mollitia, ipsam aspernatur. <br><br>
+        <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde placeat in <br>voluptas est incidunt ab dolor vero excepturi, architecto animi fuga eos <br>recusandae nobis omnis tempora modi, aspernatur quis deleniti?</p>
+    </section> 
+    <section id="precios" class="pricing">
+        <h2>Precios</h2>
+        <section class="info" >
+            <div class="precios-info">
+                <h3>Lleva contigo una historia que no olvidarás</h3>
+                <p>Cada página de <strong>Exsurgens Revenant</strong> está llena de emoción, giros inesperados y personajes que se quedarán contigo mucho después de cerrar el libro. <br> Ahora tienes la oportunidad de tenerlo en tus manos y sumergirte en su mundo.</p>
+                <p>🔗 <strong>¡Elige tu versión y adéntrate en la historia!</strong></p>
+            </div>
+        </section>
+        <div class="contenedor-cartas">
+            <div class="carta">
+                <img src="./imagenes/coverbook.png" alt="Tomo 1">
+                <h3>Tomo 1</h3>
+                <p>s/. 20.00</p>
+                <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
+            </div>
+            <div class="carta">
+                <img src="./imagenes/coverbook2.png" alt="Tomo 2">
+                <h3>Tomo 2</h3>
+                <p>s/. 20.00</p>
+                <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
+            </div>
+            <div class="carta">
+                <img src="./imagenes/coverbook3.png" alt="Tomo 3">
+                <h3>Tomo 3</h3>
+                <p>s/. 30.00</p>
+                <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
+            </div>
+        </div>
+
+    </section>
+    <section id="reseñas" class="reseñas">
+        <h2>Reseñas</h2>
+        <div class="contenedor-cartas">
+            <div class="carta">
+                <h3>Ximena Rioja</h3>
+                <p>"Increíble historia, me atrapó desde el primer momento."</p>
+            </div>
+            <div class="carta">
+                <h3>Lily Bora</h3>
+                <p>"Los personajes tienen una profundidad fascinante. ¡Recomendado!"</p>
+            </div>
+            <div class="carta">
+                <h3>Jimena Coronado</h3>
+                <p>"Arte impresionante y trama adictiva. Lo mejor que he leído en años."</p>
+            </div>
+        </div>
+
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>© 2025 - Todos los derechos reservados</p>
+                <p><a href="mailto:contacto@exsurgens.com">contacto@exsurgens.com</a></p>
+            </div>
+    
+            <div class="footer-social">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="./imagenes/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="./imagenes/x.svg" alt="Twitter">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="./imagenes/tiktok.svg" alt="TikTok">
+                </a>
+            </div>
+    
+            <div class="footer-up">
+                <button onclick="scrollToTop()">▲ Volver arriba</button>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    
+
+<!--pago-->
+
+    <div id="modalPago" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Finalizar compra</h2>
+            <form id="formPago">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="metodoPago">Método de pago:</label>
+                <select id="metodoPago" name="metodoPago">
+                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <button type="submit">Pagar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para WhatsApp -->
+<div id="modalWhatsApp" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModalWhatsApp()">&times;</span>
+        <h2>Contactar por WhatsApp</h2>
+        <form id="formWhatsApp">
+            <label for="nombreWA">Nombre:</label>
+            <input type="text" id="nombreWA" name="nombre" required>
+
+            <label for="telefonoWA">Teléfono:</label>
+            <input type="tel" id="telefonoWA" name="telefono" required>
+
+            <button type="button" onclick="enviarWhatsApp()">Enviar</button>
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
