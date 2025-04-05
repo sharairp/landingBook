@@ -148,29 +148,40 @@
     </script>
     
 
-<!--pagos-->
+<!-- Modal de pago -->
+<div id="modalPago" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Finalizar compra</h2>
+        <form id="formPago">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-    <div id="modalPago" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h2>Finalizar compra</h2>
-            <form id="formPago">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
+            <label for="tomos">Seleccionar tomo:</label>
+            <select id="tomos" name="tomos" required>
+                <option value="1">Tomo 1</option>
+                <option value="2">Tomo 2</option>
+                <option value="3">Tomo 3</option>
+            </select>
 
-                <label for="metodoPago">Método de pago:</label>
-                <select id="metodoPago" name="metodoPago">
-                    <option value="tarjeta">Tarjeta de crédito/débito</option>
-                    <option value="paypal">PayPal</option>
-                </select>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
 
-                <button type="submit">Pagar</button>
-            </form>
-        </div>
+            <label for="metodoPago">Método de pago:</label>
+            <select id="metodoPago" name="metodoPago">
+                <option value="tarjeta">Tarjeta de crédito/débito</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <p><strong>Total: $<span id="totalPrecio">0</span></strong></p>
+
+            <button type="submit">Pagar</button>
+        </form>
     </div>
+</div>
 
     <!-- Modal para WhatsApp -->
 <div id="modalWhatsApp" class="modal">
