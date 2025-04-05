@@ -49,24 +49,46 @@ document.getElementById("formPago").addEventListener("submit", function(event) {
 // Calcular el total al cargar el modal
 calcularTotal();
 
+// Mostrar el botón de PayPal solo cuando se seleccione PayPal
+document.getElementById("metodoPago").addEventListener("change", function() {
+    var metodoSeleccionado = this.value;
+    var paypalButtonContainer = document.getElementById("paypal-button-container");
 
-//portadas
-
-document.addEventListener("DOMContentLoaded", function () {
-    const botones = document.querySelectorAll(".tomo-btn");
-    const imagenes = document.querySelectorAll(".tomo-img");
-
-    botones.forEach((boton, index) => {
-        boton.addEventListener("click", () => {
-            document.querySelector(".tomo-btn.active").classList.remove("active");
-            boton.classList.add("active");
-
-            document.querySelector(".tomo-img.active").classList.remove("active");
-            imagenes[index].classList.add("active");
-        });
-    });
+    if (metodoSeleccionado === "paypal") {
+        paypalButtonContainer.style.display = "block";  // Mostrar el botón de PayPal
+        renderPayPalButton();  // Llamar a la función para renderizar el botón de PayPal
+    } else {
+        paypalButtonContainer.style.display = "none";  // Ocultar el botón de PayPal
+    }
 });
-//modal wsp
+
+// Función para renderizar el botón de PayPal
+function renderPayPalButton() {
+    // Si ya existe un botón de PayPal, destrúyelo
+    if (document.querySelector('#paypal-button-container').childElementCount > 0) {
+        document.querySelector('#paypal-button-container').innerHTML = ''; // Eliminar el botón anterior
+    }
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: document.getElementById("totalPrecio").textContent  // Usar el precio calculado
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Pago procesado con éxito. Gracias por tu compra!');
+                cerrarModal();  // Cerrar el modal después de la compra
+            });
+        }
+    }).render('#paypal-button-container');  // Renderiza el botón en el contenedor
+}
+
+// Modal de WhatsApp
 function abrirModalWhatsApp() {
     document.getElementById("modalWhatsApp").style.display = "flex";
 }
@@ -85,24 +107,10 @@ function enviarWhatsApp() {
     }
 
     let mensaje = `Hola, mi nombre es ${nombre} y quiero más información sobre la compra de los tomos de Exsurgens Revenant.`;
-    let url = `https://wa.me/51914056817?text=${encodeURIComponent(mensaje)}`; // Aquí pones tu número
+    let url = `https://wa.me/51914056817?text=${encodeURIComponent(mensaje)}`;
 
     cerrarModalWhatsApp();  // Cierra el modal antes de abrir el chat
-    setTimeout(() => { // Pequeña pausa para que el cierre del modal sea visible
+    setTimeout(() => {
         window.open(url, "_blank");
     }, 300);
 }
-//scroll
-
-document.querySelector(".btn-scroll").addEventListener("click", function() {
-    let scrollInterval = setInterval(function() {
-        let scrollPos = window.scrollY;
-        let scrollHeight = document.body.scrollHeight;
-        
-        if (scrollPos + window.innerHeight >= scrollHeight) {
-            clearInterval(scrollInterval); // Detiene el scroll al llegar abajo
-        } else {
-            window.scrollBy(0, 2); // Ajusta este valor para cambiar la velocidad
-        }
-    }, 15); // Cuanto menor el número, más rápido el scroll
-});
