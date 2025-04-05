@@ -8,12 +8,46 @@ function cerrarModal() {
     document.getElementById("modalPago").style.display = "none";
 }
 
+// Definir precios de los tomos
+const precios = {
+    1: 15,  // Tomo 1: $15
+    2: 18,  // Tomo 2: $18
+    3: 20   // Tomo 3: $20
+};
+
+// Función para calcular el total
+function calcularTotal() {
+    const tomo = parseInt(document.getElementById("tomos").value);
+    const cantidad = parseInt(document.getElementById("cantidad").value);
+    const total = precios[tomo] * cantidad;
+    document.getElementById("totalPrecio").textContent = total;
+}
+
+// Actualizar total cuando el usuario cambia el tomo o la cantidad
+document.getElementById("tomos").addEventListener("change", calcularTotal);
+document.getElementById("cantidad").addEventListener("input", calcularTotal);
+
 // Manejo del formulario de pago
 document.getElementById("formPago").addEventListener("submit", function(event) {
     event.preventDefault();
-    alert("Pago procesado con éxito. Gracias por tu compra!");
+    
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const metodoPago = document.getElementById("metodoPago").value;
+    const tomo = document.getElementById("tomos").value;
+    const cantidad = document.getElementById("cantidad").value;
+    
+    if (!nombre || !correo || !metodoPago || !tomo || !cantidad) {
+        alert("Por favor, completa todos los campos.");
+        return;
+    }
+
+    alert(`Pago procesado con éxito. Gracias por tu compra de ${cantidad} Tomo(s) ${tomo}!`);
     cerrarModal();
 });
+
+// Calcular el total al cargar el modal
+calcularTotal();
 
 
 //portadas
