@@ -6,6 +6,7 @@
     <title>Exsurgens Revenant</title>
     <link rel="stylesheet" href="stylo.css">
 </head>
+
 <body>
     <header>
         <h1 id="titulo"  class="titulo">EXSURGENS REVENANT</h1>
@@ -175,11 +176,12 @@
                 <option value="tarjeta">Tarjeta de crédito/débito</option>
                 <option value="paypal">PayPal</option>
             </select>
-
+            <div id="paypal-button-container" style="display:none;"></div>
             <p><strong>Total: $<span id="totalPrecio">0</span></strong></p>
 
             <button type="submit">Pagar</button>
         </form>
+
     </div>
 </div>
 
@@ -201,5 +203,7 @@
 </div>
 
     <script src="script.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AQ-iryGTFeQEdrXs2pyqXulzszBExtGxNCEIcFA0KJHfaCzQrAcUBpQn0xuKP5LL5BeRva7WrqjeL60t&currency=USD"></script>
+
 </body>
 </html>

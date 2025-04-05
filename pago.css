@@ -1,4 +1,5 @@
 /* Estilos del modal */
+/* Estilos del modal */
 .modal {
     display: none;
     position: fixed;
@@ -12,24 +13,32 @@
     align-items: center;
 }
 
+/* Modal con barra de desplazamiento */
 .modal-contenido {
     background: rgb(15, 15, 15);
     padding: 20px;
     width: 350px;
+    max-height: 80%; /* Limita la altura del modal */
+    overflow-y: auto; /* Añade la barra de desplazamiento vertical */
     border-radius: 10px;
     text-align: center;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden; /* No permite desplazamiento horizontal */
 }
+
+/* Estilos para que el botón de cerrar esté bien posicionado */
 .cerrar {
     position: absolute;
     right: 15px;
     top: 10px;
     font-size: 20px;
     cursor: pointer;
+    color: white;
 }
+
 
 /* Estilos del botón */
 
@@ -100,7 +109,6 @@
     box-shadow: 0px 4px 10px rgba(255, 87, 87, 0.3);
 }
 
-/*ooooo*/
 /* Alinear el formulario */
 .modal-contenido form {
     display: flex;
