@@ -18,7 +18,7 @@
                 <li><a href="#reseñas">Reseñas</a></li>
             </ul>
             <div class="Login">
-                <button class="boton-login">Login</button>
+                <button id="abrirModal" class="boton-login">Login</button>
             </div>
         </nav>
         
@@ -59,9 +59,14 @@
 
     <section id="sinopsis" class="sinopsis">
         <h2>Sinopsis</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, iure <br> ipsa nihil impedit officiis, eligendi pariatur quas iusto rerum dolore <br> quibusdam numquam adipisci blanditiis dignissimos quod corrupti tenetur <br>cupiditate. Repellendus?
-        Lorem ipsum dolor sit amet consectetur adipis <br> elit. Beatae illum veritatis velit eum consequuntur doloremque facilis <br> eveniet nulla asperiores magni molestiae, consequatur atque, cum debitis <br> ullam doloribus mollitia, ipsam aspernatur. <br><br>
-        <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde placeat in <br>voluptas est incidunt ab dolor vero excepturi, architecto animi fuga eos <br>recusandae nobis omnis tempora modi, aspernatur quis deleniti?</p>
+        <p>Un despertar. Un vacío. Una verdad que nunca debió emerger.
+
+            Eric <br>abre los ojos en un lugar que no reconoce, con la mente rota y el <br> cuerpo irreconocible. Algo lo trajo de vuelta, pero no sabe qué... o <br> quién. Mientras busca respuestas entre sombras y memorias fragmentadas, <br> comienza a sentirse observado. No está solo. Nunca lo estuvo.
+            <br>
+            <br>
+            Un viaje oscuro, íntimo y perturbador por los confines del deseo, el <br> arrepentimiento y lo que queda del alma cuando ya no queda nada más.
+            
+            </p>
     </section> 
     <section id="precios" class="pricing">
         <h2>Precios</h2>
@@ -76,19 +81,19 @@
             <div class="carta">
                 <img src="./imagenes/coverbook.png" alt="Tomo 1">
                 <h3>Tomo 1</h3>
-                <p>s/. 20.00</p>
+                <p>s/. 15.00</p>
                 <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
             </div>
             <div class="carta">
                 <img src="./imagenes/coverbook2.png" alt="Tomo 2">
                 <h3>Tomo 2</h3>
-                <p>s/. 20.00</p>
+                <p>s/. 18.00</p>
                 <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
             </div>
             <div class="carta">
                 <img src="./imagenes/coverbook3.png" alt="Tomo 3">
                 <h3>Tomo 3</h3>
-                <p>s/. 30.00</p>
+                <p>s/. 20.00</p>
                 <button class="btn-pago" onclick="abrirModal()"> Comprar ahora</button>
             </div>
         </div>
@@ -96,23 +101,28 @@
     </section>
     <section id="reseñas" class="reseñas">
         <h2>Reseñas</h2>
-        <div class="contenedor-cartas">
-            <div class="carta">
-                <h3>Ximena Rioja</h3>
-                <p>"Increíble historia, me atrapó desde el primer momento."</p>
-            </div>
-            <div class="carta">
-                <h3>Lily Bora</h3>
-                <p>"Los personajes tienen una profundidad fascinante. ¡Recomendado!"</p>
-            </div>
-            <div class="carta">
-                <h3>Jimena Coronado</h3>
-                <p>"Arte impresionante y trama adictiva. Lo mejor que he leído en años."</p>
-            </div>
+        <div class="contenedor-cartas-reseñas">
+          <div class="carta_reseña">
+            <img src="./imagenes/usuario1.jpg" alt="Ximena Rioja">
+            <h3>Ximena Rioja</h3>
+            <p>"Increíble historia, me atrapó desde el primer momento."</p>
+            <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐ 5.0</div>
+          </div>
+          <div class="carta_reseña">
+            <img src="./imagenes/usuario2.jpg" alt="Lily Bora">
+            <h3>Lily Bora</h3>
+            <p>"Los personajes tienen una profundidad fascinante. ¡Recomendado!"</p>
+            <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐ 5.0</div>
+          </div>
+          <div class="carta_reseña">
+            <img src="./imagenes/usuario3.png" alt="Jimena Coronado">
+            <h3>Jimena Coronado</h3>
+            <p>"Arte impresionante y trama adictiva. Lo mejor que he leído en años."</p>
+            <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐ 5.0</div>
+          </div>
         </div>
-
-    </section>
-    
+      </section>
+      
     <footer>
         <div class="footer-container">
             <div class="footer-info">
@@ -147,6 +157,8 @@
             });
         }
     </script>
+   
+      
     
 
 <!-- Modal de pago -->
@@ -198,6 +210,19 @@
             <input type="tel" id="telefonoWA" name="telefono" required>
 
             <button type="button" onclick="enviarWhatsApp()">Enviar</button>
+        </form>
+    </div>
+</div>
+<!-- Modal Login-->
+<div class="modal-login" id="modalLogin">
+    <div class="modal-contenido-login">
+        <span class="cerrar-login" id="cerrarModal">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+            <button type="submit">Registrarse</button>
         </form>
     </div>
 </div>
