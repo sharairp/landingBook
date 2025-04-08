@@ -29,11 +29,12 @@
     scroll-snap-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    margin-top: 20px;
   }
   
   .carta_reseña:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.6);;
   }
   
   .carta_reseña img {
