@@ -1,0 +1,37 @@
+/* Animación de Fade In y Slide Up */
+@keyframes slideUpAndFade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicación de la animación misteriosa a los elementos */
+header,
+header h1,
+nav ul,
+.portadas,
+.sinopsis,
+.pricing,
+.reseñas,
+.footer {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s; /* Asegura transición suave */
+}
+
+header.active,
+header h1.active,
+nav ul.active,
+.portadas.active,
+.sinopsis.active,
+.pricing.active,
+.reseñas.active,
+.footer.active {
+    opacity: 1;
+    transform: translateY(0);
+}

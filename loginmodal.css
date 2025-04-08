@@ -1,0 +1,77 @@
+/* Modal general */
+.modal-login {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-contenido-login {
+    background: #111;
+    padding: 30px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px #ff4d4d;
+    position: relative;
+    animation: aparecer 0.4s ease;
+}
+
+/* Animación al abrir */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón cerrar */
+.cerrar-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #ff4d4d;
+}
+
+/* Inputs */
+.modal-contenido-login input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+}
+
+/* Botón de envío */
+.modal-contenido-login button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.modal-contenido-login button:hover {
+    background-color: #ff2d2d;
+}

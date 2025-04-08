@@ -1,0 +1,64 @@
+.reseñas {
+    padding: 50px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  .reseñas h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .contenedor-cartas-reseñas {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: #ff4d4d #000000;
+  }
+
+  
+  .carta_reseña {
+    background-color: black;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  }
+  
+  .carta_reseña:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .carta_reseña img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .carta_reseña h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #ff4d4d;
+  }
+  
+  .carta_reseña p {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  .stars {
+    font-size: 0.9rem;
+    color: gold;
+  }
+  
